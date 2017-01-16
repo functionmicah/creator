@@ -1,14 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head el="head:Head">
-	<title>Creator | New Document</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="source.js"></script>
-</head>
-<body el="body:Body">
-	<div el="files:lib/ui/FileBrowser"></div>
+<head>
+	<title>Creator</title>
 
-	<div el="lib/ui/Terminal"></div>
-	<div el="lib/ui/Loader"></div>
+	<script type="text/javascript" src="source.js"></script>
+	<style type="text/css">
+		body {
+			font: 14px "Courier New";
+		}
+		button, input, textarea {
+			font-family: inherit;
+			font-size: inherit;
+		}
+
+		button {
+			border: none;
+			background: none;
+		}
+
+		button::before {
+			content: "[";
+		}
+
+		button::after {
+			content: "]";
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		[el] { display: none; }
+		.el {
+			opacity: 0;
+			transition: opacity 1s;
+		}
+		.el.READY { opacity: 1; }
+
+		.stage {
+			display: block;
+			background-color: red;
+		}
+
+		.list {
+			display: block;
+			background-color: yellow;
+		}
+			.list .el {
+				background: green;
+			}
+
+		.title {
+			background-color: green;
+		}
+		.title.SELECTED {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<stage el="stage" width="300" height="200">
+		<list el="fam" width="200" height="150">
+			<canvas>{{data}}</canvas>
+		</list>
+		<canvas el="message" width="160" height="180">
+			<p>{{data}}</p>
+		</canvas>
+	</stage>
+	<modal el="alert" el-inject="content" el-model="$URL">
+		<p>{{message}}</p>
+		<ul el="files">
+			<li>{{data}}</li>
+		</ul>
+	</modal>
 </body>
 </html>
