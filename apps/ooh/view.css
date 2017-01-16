@@ -1,0 +1,13 @@
+.ooh {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	border: none;
+	transform: scale(0.5);
+	transition: opacity 0.5s, transform 1s;
+}
+
+.ooh.RUNNING {
+	transform: scale(1);
+	opacity: 1;
+}

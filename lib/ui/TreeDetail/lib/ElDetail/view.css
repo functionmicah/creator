@@ -1,0 +1,23 @@
+.el-detail {
+	font-family: monospace;
+}
+	
+	.el-detail input.el {
+		display: inline;
+		padding: 0;
+		margin: 0;
+		border: none;
+		border-bottom: solid 1px transparent;
+		outline: none;
+
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		color: inherit;
+		background-color: inherit;
+	    transition: border-bottom-color 0.5s;
+	}
+
+	.el-detail input.el:hover {
+		border-bottom-color: inherit;
+	}

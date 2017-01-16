@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head el="head:Head">
+
+<script type="text/javascript">
+(function() {
+	function evalueate (_source) {
+		return eval(_source);
+	}
+
+	window.addEventListener("DOMContentLoaded", function() {
+		var ready = new CustomEvent("frame-ready", { bubbles: false, detail: {
+			evalueate: evalueate,
+			window: window
+		}});
+
+		parent.document.dispatchEvent(ready);
+	});
+}());
+</script>
+</head>
+
+<body el="body:Body"></body>
+</html>

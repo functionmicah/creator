@@ -1,0 +1,40 @@
+@import url(lib/ui/TreeDetail/view.css);
+
+.file-browser {
+	font-family: monospace;
+	border-radius: 4px;
+	background-color: rgba(0,0,0,0.8);
+	color: #EEE;
+}
+	.file-browser .browser {
+		margin: 1em 0;
+	}
+	.file-browser .browser::after{
+		position: relative;
+		display: block;
+		content: "";
+		clear: both;
+	}
+
+	.file-browser .file-detail {
+		overflow: hidden;
+	}
+
+	.file-browser .items {
+		float: left;
+		width: 100%;
+		margin: 0;
+		transition: width 0.5s;
+	}
+
+		.file-browser .items li::before {
+			margin-right: 8px;
+		}
+
+		.file-browser .items .file::before {
+			content: "[~~]";
+		}
+
+		.file-browser .items .folder::before {
+			content: "[^=]";
+		}

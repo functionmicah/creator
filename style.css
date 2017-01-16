@@ -1,0 +1,82 @@
+html, body {
+	height: 100%;
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	margin: 0;
+	overflow: auto;
+}
+
+iframe {
+	width: 0;
+	height: 0;
+	border: none;
+}
+
+.app-frame {
+	display: block;
+	opacity: 0;
+}
+
+.app-frame.RUNNING {
+	opacity: 1;
+}
+
+#el-cloak { display: none; }
+
+.com-fm-app-install-complete {
+	color: rgb(0,215,0);
+	font-weight: bold;
+}
+
+.com-fm-app-Source {
+	margin: 0;
+	background-color: #eee;
+	color: #555;
+	counter-reset: doc;
+	font-family: monospace;
+	font-size: 10px;
+	padding-left: 40px;
+	white-space: pre;
+	position: relative;
+	outline: none;
+	overflow: auto;
+}
+
+.com-fm-app-Source p {margin: 0;}
+.com-fm-app-Source blockquote {
+	margin: 0 0 0 2.4em !important;
+	/*border-left: 1px dotted !important;*/
+}
+/*.com-fm-app-Source blockquote * {margin-left: 40px;}*/
+
+.com-fm-app-Source p::before,
+.com-fm-app-Source div::before,
+.com-fm-app-Source blockquote::before {
+	counter-increment: doc;
+	content: counter(doc);
+	background-color: rgba(0,0,0,0.1);
+	margin-right: 10px;
+	padding-right: 4px;
+	width: 30px;
+	position: absolute;
+	left: 0;
+	display: inline-block;
+	text-align: right;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.com-fm-app-Source > :first-child {margin-top: 10px;}
+.com-fm-app-Source > :last-child {margin-bottom: 10px;}
+
+.com-fm-app-Source p :first-child::before,
+.com-fm-app-Source div :first-child::before,
+.com-fm-app-Source blockquote :first-child::before {counter-increment: none; content: none;}
+
+.el.template { display: none; }

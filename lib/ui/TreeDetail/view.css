@@ -1,0 +1,15 @@
+.tree-detail {}
+
+	.tree-detail .path,
+	.tree-detail .items {
+		padding: 0;
+		list-style: none;
+	}
+
+		.tree-detail .path li {
+			display: inline;
+		}
+
+	.tree-detail .items {
+
+	}

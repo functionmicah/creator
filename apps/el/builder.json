@@ -1,0 +1,6 @@
+{
+	"builder": {
+		"template": "apps/el/builder.html",
+		"source": "apps/el/builder.js"
+	}
+}

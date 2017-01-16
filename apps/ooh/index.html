@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head el="head:Head">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="source.js"></script>
+</head>
+
+<body el="body:Body">
+	<ul el="slideshow:Slideshow">
+		<li el="slide">
+			<img el="front:Buffer" src="">
+			<img el="back:Buffer" src="">
+			<video el="projector" src="" width="100%" autoplay></video>
+		</li>
+	</ul>
+
+	<div el="controls:Controls">
+		<a el="previous" href="slideshow.previous()">&lt;&lt;</a>
+
+		<div class="play-pause">
+			<a el="play" href="slideshow.play()">&gt;</a>
+			<a el="pause" href="slideshow.pause()">||</a>	
+		</div>
+		
+		<a el="next" href="slideshow.next()">&gt;&gt;</a>
+	</div>
+
+	<div class="list-group">
+		<ul el="models:ModelList">
+			<label>Models</label>
+			<li el="template">{{data}}</li>
+		</ul>
+
+		<ul el="videos:VideoList">
+			<label>Videos</label>
+			<li el="template">{{data}}</li>
+		</ul>
+	</div>
+</body>
+</html>
